@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Equinox | Men Who Move</title>
+  <title>Men Who MOVE</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
@@ -18,13 +17,14 @@
       font-family: 'Orbitron', sans-serif;
       background: black;
       color: white;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .hero {
       background: url('driftcar.png') no-repeat center center/cover;
-      height: 100vh;
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -42,15 +42,29 @@
 
     .hero p {
       font-size: 1.2rem;
-      color: white;
       margin-bottom: 30px;
     }
 
-    iframe {
-      border: none;
-      border-radius: 8px;
-      width: 320px;
-      height: 120px;
+    .hero a.button {
+      background-color: #ff3131;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hero a.button:hover {
+      background-color: #e60000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #999;
     }
 
     @keyframes fadeIn {
@@ -71,17 +85,18 @@
       .hero p {
         font-size: 1rem;
       }
-      iframe {
-        width: 100%;
-      }
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <h1>Equinox</h1>
+    <h1>Men Who MOVE</h1>
     <p>Fast. Focused. Unstoppable. Join the Drop.</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgpRIky2zvvViKI8l0TodI9LlMK4-0GPy6u5pBz6x9mSv-XQ/viewform?embedded=true" width="320" height="120">Loading…</iframe>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScgpRIky2zvvViKI8l0TodI9LlMK4-0GPy6u5pBz6x9mSv-XQ/viewform" target="_blank">Join Now</a>
   </div>
+
+  <footer>
+    © 2025 Men Who MOVE. All rights reserved.
+  </footer>
 </body>
 </html>
