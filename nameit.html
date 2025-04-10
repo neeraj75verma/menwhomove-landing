@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<img src="pixelated_tshirt.png" alt="Graffiti Tee" class="shirt-image" />
-
-<link rel="stylesheet" href="style.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unleash the Name</title>
+  <title>Name the Unnamed</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="nameit-section">
-    <h1>🔥 What Would You Name This T-shirt?</h1>
-    <img src="D253AC75-4B03-499E-B385-9ED44FA95343.jpeg" alt="Graffiti Tee" class="shirt-image" />
-    <form name="shirt-name" method="POST" data-netlify="true" action="thankyou.html" class="name-form">
+  <div class="hero">
+    <h1>Name This Drop</h1>
+    <p>What would *you* call this?</p>
+    <img src="tshirt1.jpg" alt="T-shirt Design" class="design-image" />
+    
+    <form name="shirt-naming" method="POST" data-netlify="true" action="thankyou.html" class="form-box">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="shirtTitle" placeholder="Name This T-shirt" required />
-      <button type="submit">Submit</button>
+      <input type="text" name="idea" placeholder="Your Name for the T-shirt" required />
+      <button type="submit">Submit Idea</button>
     </form>
-  </main>
+  </div>
 </body>
 </html>
