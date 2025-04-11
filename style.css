@@ -1,27 +1,222 @@
-@media (max-width: 768px) {
-  .horizontal-box {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; /* helps add space on narrow screens */
-  }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-  .left-box,
-  .right-box {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px; /* adds breathing room between image and form */
-  }
+/* RESET & GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .form-box {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-  .form-box input,
-  .form-box button {
-    width: 100%;
-    box-sizing: border-box;
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+  flex: 1;
+}
+
+/* BACKGROUND IMAGE FADE */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('back.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  animation: backgroundFade 1.3s ease-in forwards;
+  z-index: -1;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: orange;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #ffa500;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* HERO SECTION */
+.hero {
+  backdrop-filter: blur(8px) brightness(0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: contentFade 1s ease-in 1.5s forwards;
+}
+
+/* CALL TO ACTION BUTTON */
+.cta-button {
+  background-color: #00aaff;
+  color: black;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  box-shadow: 0 0 14px rgba(0, 170, 255, 0.5);
+  margin: 10px;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #00aaff;
+}
+
+/* IMAGE */
+img.design-image {
+  width: 333px;
+  max-width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-box input,
+.form-box button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-box input {
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+}
+
+.form-box button {
+  background: #00aaff;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-box button:hover {
+  background: white;
+  color: #00aaff;
+}
+
+/* ANIMATIONS */
+@keyframes backgroundFade {
+  to {
+    opacity: 1;
   }
 }
+
+@keyframes contentFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SECTIONED LAYOUT */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-heading h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: orange;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.horizontal-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.left-box,
+.right-box {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-box img.design-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.right-box .form-box {
+  width: 100%;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.site-footer a {
+  display: block;
+  color: #ff6600;
+  text-decoration: none;
+  margin-top: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.site-footer a:hover {
+  color: #ffaa33;
+}
+
+/* MAIN CONTENT*
