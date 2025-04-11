@@ -254,4 +254,22 @@ img.design-image {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .horizontal-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-box {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+  }
+}
 
