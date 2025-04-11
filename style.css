@@ -10,7 +10,6 @@
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -24,21 +23,8 @@ body {
   overflow-x: hidden;
   position: relative;
   flex: 1;
+  display: flex;
 }
-
-/* BACKGROUND IMAGE FADE */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url('back.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0;
-  animation: backgroundFade 1.3s ease-in forwards;
-  z-index: -1;
-}
-
-/* HEADINGS */
 h1 {
   font-size: 3.5rem;
   font-weight: 800;
@@ -53,7 +39,22 @@ p {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* HERO SECTION */
+
+
+
+/* Background Image Fade In */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('back.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  animation: backgroundFade 1.3s ease-in forwards;
+  z-index: -1;
+}
+
+/* Hero for index and thankyou */
 .hero {
   backdrop-filter: blur(8px) brightness(0.7);
   background-color: rgba(0, 0, 0, 0.3);
@@ -65,7 +66,9 @@ p {
   animation: contentFade 1s ease-in 1.5s forwards;
 }
 
-/* CALL TO ACTION BUTTON */
+
+
+
 .cta-button {
   background-color: #00aaff;
   color: black;
@@ -86,7 +89,6 @@ p {
   color: #00aaff;
 }
 
-/* IMAGE */
 img.design-image {
   width: 333px;
   max-width: 100%;
@@ -101,7 +103,6 @@ img.design-image {
   gap: 12px;
   max-width: 400px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .form-box input,
@@ -110,8 +111,6 @@ img.design-image {
   font-size: 1rem;
   border-radius: 6px;
   border: none;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .form-box input {
@@ -132,7 +131,7 @@ img.design-image {
   color: #00aaff;
 }
 
-/* ANIMATIONS */
+/* Animations */
 @keyframes backgroundFade {
   to {
     opacity: 1;
@@ -146,7 +145,7 @@ img.design-image {
   }
 }
 
-/* SECTIONED LAYOUT */
+/* === SECTIONED LAYOUT FOR nameit.html === */
 .section {
   width: 100%;
   max-width: 1200px;
@@ -171,7 +170,7 @@ img.design-image {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
   width: 100%;
 }
 
@@ -194,7 +193,38 @@ img.design-image {
   width: 100%;
 }
 
-/* FOOTER */
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 0.9rem;
+  }
+
+  .horizontal-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-box,
+  .right-box {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .section-heading h1 {
+    font-size: 2.2rem;
+  }
+}
+/* === FOOTER STYLING === */
 .site-footer {
   text-align: center;
   padding: 20px;
@@ -218,5 +248,50 @@ img.design-image {
 .site-footer a:hover {
   color: #ffaa33;
 }
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* === ABOUT SECTION STYLING (index.html) === */
 
-/* MAIN CONTENT*
+.about-block {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 30px 20px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.15);
+}
+
+.about-block h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-block p {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* MOBILE RESPONSIVE ADJUSTMENT */
+@media (max-width: 768px) {
+  .about-block h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
