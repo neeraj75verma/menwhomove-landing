@@ -12,13 +12,18 @@
     <h1>Name This Drop</h1>
     <p>What would YOU call this?</p>
     <img src="tshirt1.jpg" alt="T-shirt Design" class="design-image" />
-    
-   <form name="tshirt-name-submission" method="POST" data-netlify="true" action="/thankyou.html">
-  <input type="hidden" name="form-name" value="tshirt-name-submission" />
-
-  <input type="text" name="shirtname" placeholder="Give this beast a name" required />
-
-  <button type="submit">Submit Idea</button>
+ 
+    <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
 </form>
 
   </div>
