@@ -93,6 +93,8 @@ img.design-image {
   border-radius: 10px;
 }
 
+
+
 /* FORM */
 .form-box {
   display: flex;
@@ -205,3 +207,29 @@ img.design-image {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
 }
+@media (max-width: 768px) {
+  .horizontal-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .left-box,
+  .right-box {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  img.design-image {
+    width: 90%;
+  }
+}
+
