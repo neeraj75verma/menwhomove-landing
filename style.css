@@ -8,10 +8,11 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,11 +21,11 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
-  overflow-x: hidden;
   position: relative;
-  flex: 1;
-  display: flex;
+  overflow-y: auto;
 }
+
+/* HEADINGS */
 h1 {
   font-size: 3.5rem;
   font-weight: 800;
@@ -39,10 +40,7 @@ p {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-/* Background Image Fade In */
+/* BACKGROUND IMAGE FADE */
 body::before {
   content: "";
   position: fixed;
@@ -54,7 +52,7 @@ body::before {
   z-index: -1;
 }
 
-/* Hero for index and thankyou */
+/* HERO SECTION */
 .hero {
   backdrop-filter: blur(8px) brightness(0.7);
   background-color: rgba(0, 0, 0, 0.3);
@@ -66,9 +64,7 @@ body::before {
   animation: contentFade 1s ease-in 1.5s forwards;
 }
 
-
-
-
+/* CTA BUTTON */
 .cta-button {
   background-color: #00aaff;
   color: black;
@@ -89,209 +85,8 @@ body::before {
   color: #00aaff;
 }
 
+/* IMAGE */
 img.design-image {
   width: 333px;
   max-width: 100%;
-  margin-bottom: 30px;
-  border-radius: 10px;
-}
-
-/* FORM */
-.form-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 400px;
-  width: 100%;
-}
-
-.form-box input,
-.form-box button {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: none;
-}
-
-.form-box input {
-  background: #1a1a1a;
-  color: white;
-  border: 1px solid #333;
-}
-
-.form-box button {
-  background: #00aaff;
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.form-box button:hover {
-  background: white;
-  color: #00aaff;
-}
-
-/* Animations */
-@keyframes backgroundFade {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes contentFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* === SECTIONED LAYOUT FOR nameit.html === */
-.section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-heading h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  color: orange;
-  text-align: center;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
-}
-
-.horizontal-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 60px;
-  width: 100%;
-}
-
-.left-box,
-.right-box {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.left-box img.design-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.right-box .form-box {
-  width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .form-box input,
-  .form-box button {
-    font-size: 0.9rem;
-  }
-
-  .horizontal-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .left-box,
-  .right-box {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  .section-heading h1 {
-    font-size: 2.2rem;
-  }
-}
-/* === FOOTER STYLING === */
-.site-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-}
-
-.site-footer a {
-  display: block;
-  color: #ff6600;
-  text-decoration: none;
-  margin-top: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.site-footer a:hover {
-  color: #ffaa33;
-}
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* === ABOUT SECTION STYLING (index.html) === */
-
-.about-block {
-  max-width: 800px;
-  margin: 60px auto;
-  text-align: center;
-  padding: 30px 20px;
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.15);
-}
-
-.about-block h2 {
-  font-size: 2rem;
-  color: orange;
-  margin-bottom: 20px;
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.about-block p {
-  font-size: 1.1rem;
-  color: #f0f0f0;
-  line-height: 1.8;
-  margin-bottom: 15px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-
-/* MOBILE RESPONSIVE ADJUSTMENT */
-@media (max-width: 768px) {
-  .about-block h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-block p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-}
-
+  margin-bottom:
