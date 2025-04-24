@@ -2,49 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Name the Drop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name It | MenWhoMove</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="leadmagnet">
 
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">MWM</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container center-content">
+    <h1 class="headline">Take action today.<br> Move with us.</h1>
+    <p class="subheadline">
+      Subscribe for weekly drops, behind-the-scenes content, and sharp insights from the movement.
+    </p>
 
-  <div class="main-content">
-    <section class="hero">
-      <h1>Name the Drop</h1>
-      <p>What would you call this?</p>
-    </section>
+    <form name="lead-signup" method="POST" data-netlify="true" class="email-form">
+      <input type="hidden" name="form-name" value="lead-signup" />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="your@email.com" 
+        required 
+        class="email-input"
+      />
+      <button type="submit" class="cta-button">Join NOW</button>
+    </form>
 
-    <section class="section horizontal-box">
-      <div class="left-box">
-        <img src="tshirt1.jpg" alt="T-shirt Design" class="design-image" />
-      </div>
-      <div class="right-box">
-        <form name="shirt-naming" method="POST" data-netlify="true" action="thankyou.html" class="form-box">
-          <input type="hidden" name="form-name" value="shirt-naming">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="text" name="idea" placeholder="Your Name for the T-shirt" required />
-          <button type="submit">Submit Now</button>
-        </form>
-      </div>
-    </section>
+    <p class="trust">No spam. Just real stuff that helps you move forward.</p>
   </div>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 MenWhoMove. All rights reserved.</p>
-    <a href="https://instagram.com/menwhomove" target="_blank">@menwhomove</a>
-  </footer>
 
 </body>
 </html>
