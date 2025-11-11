@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MenWhoMove TONIC | The Ritual Begins</title>
+<link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), #0e0e0e),
+                  url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin: 1rem 0 2rem;
+      color: #cfcfcf;
+      max-width: 600px;
+    }
+
+    .btn {
+      background-color: #d4af37;
+      color: #0e0e0e;
+      padding: 0.9rem 1.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 40px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b9962c;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    section p {
+      text-align: center;
+      color: #d9d9d9;
+      margin-bottom: 2rem;
+    }
+
+    .ingredients {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .ingredient {
+      border: 1px solid #2a2a2a;
+      padding: 2rem;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ingredient:hover {
+      transform: translateY(-8px);
+    }
+
+    .ingredient h3 {
+      color: #f5f5f5;
+      margin-bottom: 0.5rem;
+    }
+
+    .ingredient p {
+      color: #c5c5c5;
+      font-size: 0.95rem;
+    }
+
+    .ritual-card {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 0;
+    }
+
+    .ritual-card img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #111;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">MenWhoMove</a>
+    <a href="giveaway.html" class="cta-button">Join the Movement</a>
+  </div>
+</header>
+  <header>
+    <h1>Meet the MenWhoMove TONIC</h1>
+    <p>Inspired by ancient balance. Engineered for modern men. The ritual that starts your motion.</p>
+    <a href="#story" class="btn">Join the Ritual →</a>
+  </header>
+
+  <section id="story">
+    <h2>Born from Stillness. Built for Motion.</h2>
+    <p>
+      The MenWhoMove TONIC was born on quiet mornings — when the mind wandered between ambition and clarity.
+      Inspired by the adaptogenic calm of <strong>Ashwagandha</strong> and the mindful mornings of great thinkers,
+      this tonic became more than a drink. It’s a ritual — to ground your thoughts, reset your pace, and fuel your next move.
+      Every sip reminds you that clarity is the real caffeine.
+    </p>
+  </section>
+
+  <section id="ritual">
+    <div class="ritual-card">
+      <img src="ritual-card.png" alt="MenWhoMove Ritual Card" />
+    </div>
+    <p style="text-align:center;">This is not a beverage. It’s your daily alignment.</p>
+  </section>
+
+  <section id="ingredients">
+    <h2>Natural. Powerful. Purposeful.</h2>
+    <div class="ingredients">
+      <div class="ingredient">
+        <h3>Ashwagandha</h3>
+        <p>Adaptogen for calm strength.</p>
+      </div>
+      <div class="ingredient">
+        <h3>Tulsi</h3>
+        <p>Balances energy.</p>
+      </div>
+      <div class="ingredient">
+        <h3>Cardamom</h3>
+        <p>Centers focus.</p>
+      </div>
+      <div class="ingredient">
+        <h3>Cinnamon</h3>
+        <p>Warms the system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <h2>This isn’t just tea. It’s the start of your motion.</h2>
+    <p>Pre-register for the <strong>MenWhoMove TONIC Kit</strong> — a complete ritual box with the tonic, T-shirt, and the Movement poster.</p>
+    <div style="text-align:center;">
+      <a href="#" class="btn">Pre-Register Now</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 <a href="https://menwhomove.store">MenWhoMove</a> | Designed for Men in Motion
+  </footer>
+</body>
+</html>
