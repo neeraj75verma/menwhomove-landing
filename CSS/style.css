@@ -1,0 +1,335 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  font-size: 120%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(
+      rgba(11,11,11,0.7),
+      rgba(11,11,11,0.85)
+    ),
+    url("../images/backdrop.jpg") center / cover no-repeat fixed;
+}
+
+/* =========================
+   COLOR SYSTEM
+========================= */
+:root {
+  --black: #0b0b0b;
+  --orange: #ff8c1a;
+  --orange-deep: #ff6a00;
+
+  --beige: #e6dccb;
+  --beige-soft: #d6cbb8;
+
+  --muted: #bdbdbd;
+  --panel-beige: rgba(230,220,203,0.08);
+  --border-beige: rgba(230,220,203,0.18);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container.narrow {
+  max-width: 720px;
+}
+
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11,11,11,0.85);
+  border-bottom: 1px solid var(--border-beige);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* TIMER */
+#drop-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--panel-beige);
+  border: 1px solid var(--border-beige);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--beige);
+}
+
+#drop-timer::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 8px rgba(255,140,26,0.8);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(11,11,11,0.45),
+    rgba(11,11,11,0.85)
+  );
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.hero-sub {
+  color: var(--beige-soft);
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+/* =========================
+   CTA
+========================= */
+.drop-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 44px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    var(--orange),
+    var(--orange-deep)
+  );
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 14px 36px rgba(255,140,26,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.drop-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px rgba(255,140,26,0.45);
+}
+
+.drop-cta.large {
+  padding: 18px 54px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.section h2 {
+  font-size: 2.1rem;
+  margin-bottom: 22px;
+}
+
+.section p {
+  color: var(--beige-soft);
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.emphasis {
+  color: var(--beige);
+  font-weight: 600;
+}
+
+/* =========================
+   STEPS / CARDS
+========================= */
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin: 50px 0 30px;
+}
+
+.step {
+  background: var(--panel-beige);
+  border: 1px solid var(--border-beige);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.step-number {
+  display: block;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.support-line {
+  margin-top: 10px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* =========================
+   DARK SECTIONS
+========================= */
+.section-dark {
+  background: rgba(11,11,11,0.7);
+  border-top: 1px solid var(--border-beige);
+  border-bottom: 1px solid var(--border-beige);
+}
+
+/* =========================
+   FINAL SECTION
+========================= */
+.section-final {
+  text-align: center;
+}
+
+.final-copy {
+  font-size: 1.2rem;
+  margin-bottom: 26px;
+  color: var(--beige);
+}
+
+/* =========================
+   NOTIFY FORM
+========================= */
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.notify-form input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border-beige);
+  background: var(--panel-beige);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.notify-form input::placeholder {
+  color: #9a9a9a;
+}
+
+.notify-form input:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 2px rgba(255,140,26,0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 90px 0 70px;
+  text-align: center;
+  background: linear-gradient(
+    rgba(11,11,11,0),
+    rgba(11,11,11,0.85)
+  );
+}
+
+.footer p {
+  color: var(--beige-soft);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.footer a {
+  color: var(--beige);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  margin: 0 12px;
+}
+
+.footer a:hover {
+  color: var(--orange);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .steps-row {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+}
